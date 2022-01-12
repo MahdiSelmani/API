@@ -10,7 +10,7 @@ function App() {
   useEffect(()=>{
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => setUsers(res.data))
-      .then(err=>console.log(err))
+      .catch(err=>console.log(err))
   }, [])
 
   return (
